@@ -3,8 +3,10 @@ import {
   Boxes,
   CircleUserRound,
   CreditCard,
+  Wallet,
   FileChartColumnIncreasing,
   Globe,
+  LockKeyhole,
   LayoutDashboard,
   LogOut,
   Package,
@@ -28,7 +30,9 @@ export type AppPage =
   | "customers"
   | "employees"
   | "sales"
+  | "cash-closings"
   | "online-orders"
+  | "finance"
   | "payments"
   | "reports"
   | "settings";
@@ -50,6 +54,11 @@ type SidebarProps = {
 const operationItems: SidebarItem[] = [
   { id: "dashboard", label: "Dashboard", icon: <LayoutDashboard /> },
   { id: "sales", label: "Vendas", icon: <ReceiptText /> },
+  {
+    id: "cash-closings",
+    label: "Fechamentos de Caixa",
+    icon: <LockKeyhole />,
+  },
   { id: "online-orders", label: "Pedidos Online", icon: <Globe /> },
 ];
 
@@ -62,6 +71,7 @@ const registrationItems: SidebarItem[] = [
 ];
 
 const systemItems: SidebarItem[] = [
+  { id: "finance", label: "Financeiro", icon: <Wallet /> },
   { id: "payments", label: "Formas de Pagamento", icon: <CreditCard /> },
   {
     id: "reports",
